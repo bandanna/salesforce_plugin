@@ -61,6 +61,8 @@ class SalesforceHook(BaseHook):
                 'instance_url': self.connection.host,
                 'domain': self.extras.get('domain') if len(self.extras.get('domain'))>0 else None
             }
+
+        print(auth_kwargs)
         # connect to Salesforce
         self.sf = Salesforce(**auth_kwargs)
 
