@@ -51,7 +51,6 @@ class SalesforceHook(BaseHook):
             auth_kwargs = {
                 'instance_url': self.connection.host,
                 'session_id': self.connection.password
-            }
 
         else:
             print(self.extras)
@@ -59,8 +58,7 @@ class SalesforceHook(BaseHook):
                 'username': self.connection.login,
                 'password': self.connection.password,
                 'security_token': self.extras.get('security_token')
-                # 'instance_url': self.connection.host,
-                # 'domain': self.extras.get('domain')
+                'instance_url': self.connection.host
             }
 
         # connect to Salesforce
