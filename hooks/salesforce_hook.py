@@ -59,7 +59,7 @@ class SalesforceHook(BaseHook):
                 'password': self.connection.password,
                 'security_token': self.extras.get('security_token'),
                 # 'instance_url': self.connection.host,
-                'domain': self.extras.get('domain')
+                # 'domain': self.extras.get('domain')
             }
 
         # connect to Salesforce
