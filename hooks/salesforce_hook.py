@@ -57,7 +57,7 @@ class SalesforceHook(BaseHook):
             auth_kwargs = {
                 'username': self.connection.login,
                 'password': self.connection.password,
-                'security_token': self.extras.get('security_token'),
+                'security_token': self.extras.get('security_token')
                 # 'instance_url': self.connection.host,
                 # 'domain': self.extras.get('domain')
             }
