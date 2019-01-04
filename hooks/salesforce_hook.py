@@ -54,8 +54,8 @@ class SalesforceHook(BaseHook):
             }
 
         else:
+            print(self.extras)
             auth_kwargs = {
-                print(self.extras)
                 'username': self.connection.login,
                 'password': self.connection.password,
                 'security_token': self.extras.get('security_token')
