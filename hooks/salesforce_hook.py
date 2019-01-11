@@ -50,10 +50,13 @@ class SalesforceHook(BaseHook):
         if auth_type == 'direct':
             auth_kwargs = {
                 'instance_url': self.connection.host,
-                'session_id': self.connection.password
+                'session_id': self.connection.password,
+                'security_token': self.extras.get('security_token')
+            }
 
         else:
-            print(self.extras)
+
+            print("------- here -------")
             auth_kwargs = {
                 'username': self.connection.login,
                 'password': self.connection.password,
